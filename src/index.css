@@ -4,45 +4,54 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* --- Background and Foreground --- */
+    --background: 0 0% 0%; /* Black */
+    --foreground: 0 0% 100%; /* White */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* --- Cards --- */
+    --card: 0 0% 7%; /* Very dark gray (#121212) */
+    --card-foreground: 0 0% 95%; /* Near white (#f2f2f2) */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* --- Popovers --- */
+    --popover: 0 0% 7%; /* Very dark gray */
+    --popover-foreground: 0 0% 95%; /* Near white */
 
-    /* Updated Primary Colors */
+    /* --- Primary Colors (Unchanged) --- */
     --primary: 211 100% 50%; /* Calming Blue */
     --primary-foreground: 210 40% 98%; /* White */
 
+    /* --- Secondary Colors (Unchanged) --- */
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* --- Muted Colors --- */
+    --muted: 210 40% 96.1%; /* Original muted background color kept for elements that might use it */
+    --muted-foreground: 0 0% 60%; /* Light gray for muted text on black background */
 
+    /* --- Accent Colors (Unchanged) --- */
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
+    /* --- Destructive Colors (Unchanged) --- */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    /* New Success Colors */
+    /* --- Success Colors (Unchanged) --- */
     --success: 134 61% 40%; /* Green */
     --success-foreground: 210 40% 98%; /* White */
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 211 100% 50%; /* Updated Ring to match new primary */
+    /* --- Borders & Inputs --- */
+    --border: 0 0% 20%; /* Gray for borders */
+    --input: 0 0% 12%; /* Dark gray for input backgrounds */
+    --ring: 211 100% 50%; /* Ring to match primary */
 
-    --radius: 0.5rem; /* 8px, as per "softly rounded corners (e.g., 6-8px radius)" */
+    /* --- Radius (Unchanged) --- */
+    --radius: 0.5rem;
 
-    /* New Font Family */
+    /* --- Font Family (Unchanged) --- */
     --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
-    /* Sidebar variables remain untouched as per limited scope of design input */
+    /* --- Sidebar variables (Untouched) --- */
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -54,40 +63,48 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* --- Background and Foreground --- */
+    --background: 0 0% 0%; /* Black */
+    --foreground: 0 0% 100%; /* White (was 210 40% 98%) */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    /* --- Cards --- */
+    --card: 0 0% 7%; /* Very dark gray (was 222.2 84% 4.9%) */
+    --card-foreground: 0 0% 95%; /* Near white (was 210 40% 98%) */
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    /* --- Popovers --- */
+    --popover: 0 0% 7%; /* Very dark gray (was 222.2 84% 4.9%) */
+    --popover-foreground: 0 0% 95%; /* Near white (was 210 40% 98%) */
 
-    /* Updated Primary Colors for Dark Mode */
-    --primary: 210 40% 98%; /* Light Blue/White for high contrast on dark */
-    --primary-foreground: 211 80% 15%; /* Dark Blue, consistent hue with light primary */
+    /* --- Primary Colors (Unchanged from original dark spec) --- */
+    --primary: 210 40% 98%;
+    --primary-foreground: 211 80% 15%;
 
+    /* --- Secondary Colors (Unchanged from original dark spec) --- */
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    /* --- Muted Colors --- */
+    --muted: 217.2 32.6% 17.5%; /* Original dark muted background */
+    --muted-foreground: 0 0% 60%; /* Light gray for muted text on black (was 215 20.2% 65.1%) */
 
+    /* --- Accent Colors (Unchanged from original dark spec) --- */
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
 
+    /* --- Destructive Colors (Unchanged from original dark spec) --- */
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    /* New Success Colors for Dark Mode */
-    --success: 134 50% 65%; /* Lighter Green */
-    --success-foreground: 134 90% 10%; /* Dark Green/Black */
+    /* --- Success Colors (Unchanged from original dark spec) --- */
+    --success: 134 50% 65%;
+    --success-foreground: 134 90% 10%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 210 40% 98%; /* Updated Ring to match dark primary (light color for dark bg) */
+    /* --- Borders & Inputs --- */
+    --border: 0 0% 20%; /* Gray for borders (was 217.2 32.6% 17.5%) */
+    --input: 0 0% 12%; /* Dark gray for input backgrounds (was 217.2 32.6% 17.5%) */
+    --ring: 210 40% 98%; /* Ring to match dark primary */
 
-    /* Sidebar variables remain untouched */
+    /* --- Sidebar variables (Untouched) --- */
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
