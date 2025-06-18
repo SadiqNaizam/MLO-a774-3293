@@ -13,8 +13,9 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Updated Primary Colors */
+    --primary: 211 100% 50%; /* Calming Blue */
+    --primary-foreground: 210 40% 98%; /* White */
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -28,26 +29,27 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
+    /* New Success Colors */
+    --success: 134 61% 40%; /* Green */
+    --success-foreground: 210 40% 98%; /* White */
+
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 211 100% 50%; /* Updated Ring to match new primary */
 
-    --radius: 0.5rem;
+    --radius: 0.5rem; /* 8px, as per "softly rounded corners (e.g., 6-8px radius)" */
 
+    /* New Font Family */
+    --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+    /* Sidebar variables remain untouched as per limited scope of design input */
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -61,8 +63,9 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    /* Updated Primary Colors for Dark Mode */
+    --primary: 210 40% 98%; /* Light Blue/White for high contrast on dark */
+    --primary-foreground: 211 80% 15%; /* Dark Blue, consistent hue with light primary */
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -76,9 +79,15 @@
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
+    /* New Success Colors for Dark Mode */
+    --success: 134 50% 65%; /* Lighter Green */
+    --success-foreground: 134 90% 10%; /* Dark Green/Black */
+
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --ring: 210 40% 98%; /* Updated Ring to match dark primary (light color for dark bg) */
+
+    /* Sidebar variables remain untouched */
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -97,5 +106,6 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans); /* Apply the new sans-serif font stack */
   }
 }
