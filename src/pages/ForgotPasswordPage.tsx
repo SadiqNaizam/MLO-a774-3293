@@ -39,7 +39,7 @@ const ForgotPasswordPage: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-950">
+    <div className="flex flex-col min-h-screen bg-background text-foreground">
       <Header />
       <main className="flex-grow flex flex-col items-center justify-center p-6 sm:p-8">
         <AuthFormCard
@@ -56,11 +56,7 @@ const ForgotPasswordPage: React.FC = () => {
         >
           <form onSubmit={handleSubmit} className="space-y-4">
             {message && (
-              <Alert variant={message.type === 'error' ? 'destructive' : 'default'} className={message.type === 'success' ? 'bg-green-50 border-green-200 dark:bg-green-900 dark:border-green-700' : ''}>
-                {message.type === 'success' ? <CheckCircle2 className="h-4 w-4" /> : <TriangleAlert className="h-4 w-4" />}
-                <AlertTitle>{message.type === 'success' ? 'Email Sent' : 'Error'}</AlertTitle>
-                <AlertDescription>{message.text}</AlertDescription>
-              </Alert>
+              <Alert variant={message.type === 'error' ? 'destructive' : 'default'} className={message.type === 'success' ? 'bg-green-50 border-green-200 text-green-800 dark:bg-green-900 dark:border-green-700 dark:text-green-100' : ''}>\n                {message.type === 'success' ? <CheckCircle2 className=\"h-4 w-4\" /> : <TriangleAlert className=\"h-4 w-4\" />}\n                <AlertTitle>{message.type === 'success' ? 'Email Sent' : 'Error'}</AlertTitle>\n                <AlertDescription>{message.text}</AlertDescription>\n              </Alert>
             )}
             <div className="space-y-2">
               <Label htmlFor="email">Email Address</Label>
@@ -78,9 +74,7 @@ const ForgotPasswordPage: React.FC = () => {
                 />
               </div>
             </div>
-            <Button type="submit" className="w-full" disabled={isLoading}>
-              {isLoading ? 'Sending...' : 'Send Password Reset Link'}
-            </Button>
+            <Button type="submit" className="w-full" disabled={isLoading}>\n              {isLoading ? 'Sending...' : 'Send Password Reset Link'}\n            </Button>
           </form>
         </AuthFormCard>
       </main>
