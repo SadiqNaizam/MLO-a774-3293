@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+// No import for defaultTheme as we are defining the font stack in CSS and referencing it.
 
 export default {
 	darkMode: ["class"],
@@ -36,6 +37,11 @@ export default {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'
 				},
+				// New success color mapping
+				success: {
+					DEFAULT: 'hsl(var(--success))',
+					foreground: 'hsl(var(--success-foreground))'
+				},
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',
 					foreground: 'hsl(var(--muted-foreground))'
@@ -67,6 +73,10 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			// New font family extension
+			fontFamily: {
+			  sans: ['var(--font-sans)'], // References the CSS variable defined in index.css
 			},
 			keyframes: {
 				'accordion-down': {
